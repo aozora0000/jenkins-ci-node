@@ -20,7 +20,7 @@ RUN wget git.io/nodebrew &&\
     perl nodebrew setup && \
     echo "export PATH=$HOME/.nodebrew/current/bin:$PATH" > /home/worker/.bashrc
 
-ENV NODE_VERSION v0.10.35
+ENV NODE_VERSION v0.9.12
 
 RUN source /home/worker/.bashrc && \
     nodebrew install-binary $NODE_VERSION && \
