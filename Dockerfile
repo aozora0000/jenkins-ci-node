@@ -20,11 +20,9 @@ RUN wget git.io/nodebrew &&\
     perl nodebrew setup && \
     echo "export PATH=$HOME/.nodebrew/current/bin:$PATH" > /home/worker/.bashrc
 
-ENV NODE_VERSION v0.9.12
-
 RUN source /home/worker/.bashrc && \
-    nodebrew install-binary $NODE_VERSION && \
-    nodebrew use $NODE_VERSION
+    nodebrew install-binary v0.9.12 && \
+    nodebrew use v0.9.12
 
 #################################
 # default behavior is to login by worker user
