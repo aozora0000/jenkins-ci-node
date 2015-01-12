@@ -7,10 +7,10 @@ RUN yum -y update && \
     yum -y install ansible && \
     yum -y update gmp
 
-RUN mkdir /tmp/ansible
-ADD ./playbook.yml /tmp/ansible/
-WORKDIR /tmp/ansible
-RUN ansible-playbook playbook.yml
+# RUN mkdir /tmp/ansible
+# ADD ./playbook.yml /tmp/ansible/
+# WORKDIR /tmp/ansible
+# RUN ansible-playbook playbook.yml
 
 USER worker
 ENV HOME /home/worker
