@@ -21,8 +21,8 @@ RUN wget git.io/nodebrew &&\
     echo "export PATH=$HOME/.nodebrew/current/bin:$PATH" > /home/worker/.bashrc
 
 RUN source /home/worker/.bashrc && \
-    nodebrew install-binary io@v1.0.4 && \
-    nodebrew use io@v1.0.4
+    nodebrew install-binary io@v1.1.0 && \
+    nodebrew use io@v1.1.0
 
 #################################
 # default behavior is to login by worker user
